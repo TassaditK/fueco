@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("hover-min.css");
+* {
+    /* font-family: "Raleway", sans-serif; */
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 0.85em;
+}
+
+@media only screen and (min-width: 768px) {
+    p {
+        font-size: 0.9em;
+    }
+}
+
+a {
+    color: #000;
+}
+
+
+/* section-heading-block */
+
+.section-heading-block {
+    text-align: center;
+    width: 70%;
+    position: relative;
+    margin: 50px auto;
+}
+
+.section-heading-block::after {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: #b4b2b2;
+    content: "";
+    bottom: -10px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.section-heading-block .section-title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.section-heading-block .section-desc {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+    .section-heading-block .section-title {
+        font-size: 3em;
+    }
+    .section-heading-block .section-desc {
+        font-size: 1.5em;
+    }
+}
+
+.intro-headline-desc {
+    white-space: nowrap;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/*  */
+
+
+/* services */
+
+.services {
+    padding: 30px 0 100px;
+}
+
+
+/* contact-form-page */
+
+.contact-form-page {
+    padding: 5px 0 0;
+    position: relative;
+    background: linear-gradient(#21212b24, #21212b8f), url(https://c4.wallpaperflare.com/wallpaper/605/490/357/simple-gradient-minimalism-wallpaper-preview.jpg) no-repeat;
+    color: #fff;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-form-page .wpcf7-form-control {
+    background: transparent;
+    border-bottom: 1px solid #b4b2b2;
+}
+
+.contact-form-page .contact-page-form {}
+
+@media only screen and (min-width: 992px) {
+    .contact-form-page .contact-page-form {
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+}
+
+.contact-form-page .wpcf7 {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 20px 3px #0000000d;
+    box-shadow: 0 0 20px 3px #0000000d;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-form-page .wpcf7 {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.contact-form-page .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-form-page .wpcf7-form p {
+        width: 50%;
+        padding: 0 1em;
+    }
+}
+
+.contact-form-page .wpcf7-form .message {
+    width: 100%;
+}
+
+.contact-form-page .wpcf7-form label {
+    width: 100%;
+}
+
+.contact-form-page .wpcf7-form .message textarea {
+    width: 100%;
+    height: 150px;
+    border: none;
+    background-color: transparent;
+    padding: 2em;
+    border-bottom: 1px solid #b4b2b2;
+}
+
+.contact-form-page .wpcf7-form p input {
+    height: 46px;
+    padding: 0.375rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b4b2b2;
+}
+
+.contact-form-page input::placeholder {
+    color: white;
+}
+
+.contact-form-page .wpcf7-form-control.wpcf7-textarea::placeholder {
+    color: white;
+}
+
+.contact-form-page .width80 {
+    margin: 0 auto 50px;
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-form-page .width80 {
+        width: 60%;
+    }
+}
+
+.contact-form-page .wpcf7-submit {
+    display: inline-block;
+    text-align: center;
+    background-color: #9b9494e3!important;
+    width: 49%;
+    min-width: 170px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid #e2e2e2;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    /*color: #21212b !important;*/
+    font-weight: bold !important;
+}
+
+.contact-form-page .wpcf7-submit:hover {
+    background-color: #bbb1b1e3!important;
+    color: rgb(71, 71, 71)!important;
+}
+
+.contact-form-page .address {
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-form-page .address {
+        margin-top: 0;
+    }
+}
+
+.contact-form-page .address-block {
+    padding-top: 50px;
+}
+
+.contact-form-page .address-block .address h4 {
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #dfdfdf;
+}
+
+.contact-form-page .address-block .address .key-val-item {
+    display: flex;
+    color: #b3b3b3;
+}
+
+.contact-form-page .address-block .address .key {
+    font-weight: bold;
+    font-size: 0.85em;
+    width: 20%;
+}
+
+.contact-form-page .address-block .address .val {
+    width: 80%;
+    font-size: 0.8em;
+}
+
+.contact-form-page .image-color-invert {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.contact-form-page .btn-shape--pill {
+    padding-left: 22.5px;
+    padding-right: 22.5px;
+    font-size: 15px;
+    height: 45px;
+    color: #fff;
+    background-color: #04f;
+    border-color: #04f;
+    border-radius: 100px;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.colereu{
+    color: rgba(23, 77, 95, 0.651)!important;
+    }
+    label{
+        font-weight: lighter!important;
+    }
+    a{
+        color: rgba(2, 10, 32, 0.938)!important;
+    }
+    a:hover{
+        color: rgba(51, 52, 54, 0.938)!important;
+    }

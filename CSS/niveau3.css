@@ -1,0 +1,54 @@
+.profile .table-properties th {
+    font-weight: normal;
+    width: 15rem;
+  }
+  
+  /* .profile .table-properties td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } */
+  .profile .table-properties tr:first-child td,
+  .profile .table-properties tr:first-child th {
+    border-top: none !important;
+  }
+  
+  .profile .img-lg {
+    width: 20rem;
+    height:20rem;
+  }
+  .padding{
+    padding-left: 800px;
+  }
+  .btn{
+  background-color:gainsboro!important;
+  color: black  !important;
+  }
+  .btn:hover{
+    background-color: gray !important;
+  }
+  #biography{
+    height: 300px;
+  }
+  
+
+ #police{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.colereu{
+  color: rgba(23, 77, 95, 0.651)!important;
+  }
+.nav-link{
+  display: contents !important;
+}
+.nav-item+.nav-item{
+  margin-left: 2rem;
+}
+#style{
+  font-style: italic;
+  color :rgb(167, 164, 164);
+}
+img[src=""] {
+  display: none;
+}   
+   

@@ -1,0 +1,34 @@
+{ "publication": [ 
+    { 
+       "id":0,
+       "description":" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra urna velit,         sit amet commodo est auctor sodales. Praesent a elit nulla. In hac habitasse platea dictumst.",
+       "button":"En savoir plus",
+       "image":"https://img.icons8.com/android/12/ffffff/play.png",
+       "image1":"https://img.icons8.com/android/14/000000/clock.png",
+       "datePublication":"6 mins ago",
+       "image2":"https://img.icons8.com/android/14/646464/speech-bubble.png",
+       "idPage":null
+       
+    },
+    { 
+        "id":1,
+        "description":"deplacement velo ",
+        "button":"En savoir plus",
+        "image":"https://img.icons8.com/android/12/ffffff/play.png",
+        "image1":"https://img.icons8.com/android/14/000000/clock.png",
+        "datePublication":"6 mins ago",
+        "image2":"https://img.icons8.com/android/14/646464/speech-bubble.png",
+        "idPage":null
+     },
+     { 
+        "id":5,
+        "description":" PLANTER ARBRE",
+        "button":"En savoir plus",
+        "image":"https://img.icons8.com/android/12/ffffff/play.png",
+        "image1":"https://img.icons8.com/android/14/000000/clock.png",
+        "datePublication":"6 mins ago",
+        "image2":"https://img.icons8.com/android/14/646464/speech-bubble.png",
+        "idPage":null
+        
+     }
+]}

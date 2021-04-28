@@ -1,0 +1,43 @@
+{{>header}}
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../challangesStyle.css">
+    
+</head>
+<!-- details card section starts from here -->
+<body style="background-color: #ecf0f1;">
+<h2 class="text-center"></h2>
+<section class="details-card ">
+    <div class="container">
+        <div class="row">
+            {{#challenges}}
+            <div class="col-md-4 mb-5 ">
+                <div class="card-content card ">
+                    <div class="card-img "  style="background-image:url({{image}});">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a class="hover" href="/publication/{{id}}">Accéder</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-desc ">
+                        <h3>{{title}}</h3> <!--Titre-->
+                        <p>{{description}}</p>
+                             <!--Lien vers la page-->
+                    </div>
+                </div>
+            </div> 
+            {{/challenges}}  
+         </div>
+    </div>
+
+</section>
+</body>
+<!-- details card section starts from here -->
+
+
+
+
+{{>footer}}

@@ -1,0 +1,90 @@
+{{>header}}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signaler une publication</title>
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="../reportStyle.css">
+</head>
+
+<body>
+
+  <form method="POST" action="/report">
+
+    <fieldset>
+      <div class="heading">
+        <legend><span class="number">1</span> Vos informations de contact</legend>
+      </div>
+
+      <label for="name">Pseudo</label>
+      <input type="text" id="name" name="user_name">
+
+      <label for="mail">Email</label>
+      <input type="email" id="mail" name="user_email">
+
+
+      </select>
+      <div class="heading">
+        <legend><span class="number">2</span> Votre message</legend>
+      </div>
+
+      <label for="topic">Sujet</label>
+      <select id="topic" name="user_topic">
+        <option value disabled selected> -- Nom du challenge -- </option>
+        <option value="C0">Nettoyage de plage</option>
+        <option value="C1">Déplacement en vélo</option>
+        <option value="C2">Recyclage</option>
+        <option value="C3">Planter un arbre</option>
+        <option value="C4">Installer des panneaux solaires</option>
+        <option value="C5">Planter un potager</option>
+      </select>
+      <label for="topic">Raison</label>
+      <select id="topic" name="user_reason">
+        <option value disabled selected> --Veuillez sélectionner une raison-- </option>
+        <option value="C0">Nudité</option>
+        <option value="C1">Violence</option>
+        <option value="C2">Harcelement</option>
+        <option value="C3">Suicide ou automutilation</option>
+        <option value="C4">Fausse informations</option>
+        <option value="C5">Contenu indesirable</option>
+        <option value="C6">Discourd haineux</option>
+        <option value="C7">Terrorisme</option>
+        <option value="C8">Contenu vulgaire</option>
+        <option value="C8">Autre chose</option>
+      </select>
+
+      <label for="question">Message</label>
+      <textarea id="question" name="user_message" placeholder="Veuillez précisez l'auteur de la publication et ce que vous souhaitez signaler"></textarea>
+      <div class="gd-rgpd-agree" style="font-size:11px;display:block;clear:both;">
+        <p class="cgv-text" style="padding:15px 0 0 0;margin:0 0 7px 0;">
+        <input type="checkbox" id="agree" name="agreement" required style="display:inline-block;float:left;margin-right:5px;" />
+        <label for="agree" style="display:inline;">
+        En cochant cette case et en soumettant ce formulaire, j'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations.
+        </label>
+        </p>
+        <p class="cgv-text">Pour connaitre et exercer vos droits , notamment de retrait de votre consentement à l'utilisation de données collectés par ce formulaire, veuillez consulter notre 
+        <a style="text-decoration:underline;" href="/pages/politique-de-confidentialite" target="_blank">Politique de confidentialité</a>
+        </p>
+      </div>
+      <script>
+          jQuery(document).ready(function() {
+            jQuery('body').on('click', '[name="checkout"], [name="goto_pp"], [name="goto_gc"]', function() {
+              if (jQuery('#agree').is(':checked')) {
+                jQuery(this).submit();
+              } else {
+                //alert("You must agree with the terms and conditions of sales to check out.");
+                alert("Vous devez accepter les conditions générales de vente pour pouvoir passer commande .");
+                return false;
+              }
+              });
+          });
+      </script>
+      <div style="text-align: center">
+        <button type="submit">Envoyer</button>
+
+    </fieldset>
+
+  </form>
+{{>footer}}

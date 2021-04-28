@@ -1,0 +1,74 @@
+{{>header}}
+<head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="../deleteprofilStyle.css">
+</head>
+
+<body>
+<div class="container">
+<hr>
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Supprimer votre compte defenitivement</h4>
+	<p class="text-center">Bonjour  <strong>{{name}}</strong>,<br>
+        si vous choisissez de supprimer votre compte :  <br>
+        <ul>
+            <li>
+                Une fois votre compte supprimé, <strong>vous ne pourrez plus le réactiver </strong> . 
+            </li>
+            <li>
+                Nous ne procédons à la <strong> immédiatement après la demande </strong>.<br>Si vous vous connectez à nouveau à votre compte <b>celui ci ne sera plus accessible</b>. 
+            </li>
+            <li>
+                Des copies de certains éléments (par exemple, les publications) <br> <b>resteront  dans notre base de données</b>, mais ne seront plus associées à aucun identifiant personnel.
+            </li>
+        </ul>
+	 <hr>
+	<form method="POST" action="/deleteprofil">
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fas fa-user-minus"></i> </span>
+		</div>
+		<select class="form-control" name="reason">
+			<option selected="">Pourquoi désactivez-vous votre compte ?</option>
+			<option>Trop de publicités</option>
+			<option>J'ai créé un second compte</option>
+			<option>Problème de confidentialité</option>
+            <option>Problème d'utilisation</option>
+            <option>Autre chose</option>
+
+		</select>
+	</div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="confirmez votre mot de passe " type="password" name="password">
+    </div> <!-- form-group// -->
+                                  
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Supprimer compte </button>
+    </div> <!-- form-group// -->                                                                
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+
+
+</article>
+</body>
+{{>footer}}

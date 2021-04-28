@@ -1,0 +1,113 @@
+{{>header}}
+<head>
+  <link rel="stylesheet" type="text/css" href="../publicationsStyle.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../Models/model.js"></script>
+</head>
+
+<body>
+  {{#publication}}
+  {{#boolean}}
+  <p class="alert alert-danger">ERROR : {{msg}}.</p>
+  {{/boolean}}
+  {{#bolean}}
+  <p class="alert alert-success">SUCCED: {{msg}}.</p>
+  {{/bolean}}
+  {{/publication}}
+  <div class=" card  d-flex  justify-content-center " id="card2">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts"
+            aria-selected="true">Make
+            a publication</a>
+        </li>
+      </ul>
+    </div>
+
+    {{#publication}}
+    <form method="POST" action="/publication/{{idPage}}" enctype="multipart/form-data">
+      {{/publication}}
+      <div class="card-body " id="card3">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+            <div class="form-group">
+              <label class="sr-only" for="message">post</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"
+                name="description"></textarea>
+            </div> 
+          </div>
+          <div class="form-group">
+            <!-- <div class="custom-file"> -->
+              <i class="fas fa-camera"></i>
+              <span > <input  type="file"   class="form-control mb-4" id="customFile" name="myImage"  value="lol" style="opacity: 0;height: 50px;width: 80px;margin-top: -30px;margin-left: -30px;"></span>
+             <div class="file-path-wrapper">
+              <input class="file-path validate " style="visibility: hidden;" type="text">
+            <!-- </div> -->
+            </div>
+          </div>       
+            </div>
+          </div>
+          <div class="btn-toolbar justify-content-between" style="margin-top: 50px;">
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary">Partager</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  </div>
+  </form>
+
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+      {{#publication}}
+      <div class="col mb-3">
+        <div class="card mb-3 ">
+          <div class="cardImg" style="background-image:url({{image}}) !important;">
+            <!-- <img src="{{image}}" alt="Card image cap " class="responsive-img"> -->
+            <span class="circle">{{day}}<br />{{month}}</span>
+            <a href="/user_profil/{{name}}"><span class=" lead cardImgFooter" >{{name}}</span></a>
+          </div>
+          <a href="/report" style="text-align: right;" >Signaler ce post</a>
+          <div class="cardText" >
+            <p  class="cardDescription" >
+              {{description}}
+              <br>
+            </p>
+            <div class="cardFooter">
+              <span class="timeAgo">
+                <img src="https://img.icons8.com/android/14/000000/clock.png">
+                {{heure}}
+              </span>
+           
+              <span><a href="/like/{{idPost}}" id="IDUNIQUE" type="submit"  > <i  class="far fa-thumbs-up" aria-hidden="true"  > {{like}}
+                     </i></a></span>
+              
+            
+                   <span> <a href="/dislike/{{idPost}}" type="submit" ><i class="far fa-thumbs-down" aria-hidden="true" > {{dis_like}}  </i></a> </span>
+               
+              <!--TODO-->
+              <span class="comments">
+                <img src="https://img.icons8.com/android/14/646464/speech-bubble.png">
+                <a href="/commentaire/{{idPost}}" style="text-decoration: none;color: #333;">{{totalComment}} commentaire</a>
+                <!--TODO -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/publication}}
+    </div>
+  </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+{{>footer}}

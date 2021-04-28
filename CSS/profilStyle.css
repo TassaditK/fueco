@@ -1,0 +1,54 @@
+
+.profile .table-properties th {
+  font-weight: normal;
+  width: 15rem;
+}
+
+/* .profile .table-properties td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */
+.profile .table-properties tr:first-child td,
+.profile .table-properties tr:first-child th {
+  border-top: none !important;
+}
+
+.profile .img-lg {
+  width: 20rem;
+  height:20rem;
+}
+.padding{
+  padding-left: 800px;
+}
+.btn{
+background-color:gainsboro!important;
+color: black  !important;
+}
+.btn:hover{
+  background-color: gray !important;
+}
+#biography{
+  height: 300px;
+}
+.input-field{
+  position: absolute !important;
+  top: 20%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%)!important;
+  opacity: 0;
+  width: 30rem;
+  height:30rem;
+}
+.colereu{
+  color: rgba(23, 77, 95, 0.651)!important;
+  }
+.nav-link{
+  display: contents !important;
+}
+.nav-item+.nav-item{
+  margin-left: 2rem;
+}
+img[src=""] {
+  display: none;
+}   

@@ -1,0 +1,122 @@
+{{>header}}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--  Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../contactUsStyle.css">
+
+    <!--  fontawesome -->
+
+    <script src="https://kit.fontawesome.com/b73881b7c2.js" crossorigin="anonymous"></script>
+
+    <!-- image-hover -->
+    <link rel="stylesheet" href="css/imagehover.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,500,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!--  Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Nous contacter </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contact-form-page">
+            <div class="width80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading-block">
+                                <h4 class="section-title text-light">
+                                    Nous contacter
+                                </h4>
+
+                            </div>
+                            <div role="form" class="wpcf7" id="wpcf7-f90-o1" lang="en-US" dir="ltr">
+
+
+                                <div class="screen-reader-response" aria-live="polite"></div>
+                                <form action="/contactus" method="post" class="wpcf7-form">
+
+                                    <p><label>
+                                            <span class="wpcf7-form-control-wrap your-name"><input type="text"
+                                                    name="name" size="40"
+                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                    aria-required="true" aria-invalid="false" placeholder="Nom"></span>
+                                        </label></p>
+
+                                    <p><label>
+                                            <span class="wpcf7-form-control-wrap your-email"><input type="email"
+                                                    name="email" size="40"
+                                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                    aria-required="true" aria-invalid="false"
+                                                    placeholder="Email"></span>
+                                        </label>
+                                    </p>
+
+                                    <p class="message"><label> <br>
+                                            <span class="wpcf7-form-control-wrap your-message"><textarea name="message"
+                                                    cols="50" rows="10" class="wpcf7-form-control wpcf7-textarea"
+                                                    aria-invalid="false" placeholder="message"></textarea></span>
+                                        </label>
+                                    </p>
+                                    
+                                    <div class="gd-rgpd-agree" style="font-size:12px;display:block;clear:both;">
+                                        <input type="checkbox" name="agreement" id="agree" required
+                                            style="display:inline-block;float:left;margin-right:7px;" />
+                                        <label for="agree" style="display:inline;">
+                                            En cochant cette case et en soumettant ce formulaire, j'accepte que mes
+                                            données personnelles telle que l'email soient utilisées pour contacter
+                                            Fueco. Aucun autre traitement ne sera effectué avec mes informations.
+                                        </label>
+                                      
+                                        <label class="cgv-text">Pour connaitre et exercer vos droits , notamment de retrait
+                                            de votre consentement à l'utilisation de données collectés par ce
+                                            formulaire, veuillez consulter notre
+                                            <a style="text-decoration:underline;" href="/privacyPolicy"
+                                                target="_blank">Politique de confidentialité</a>
+                                        </label>
+                                    </div>
+                                    <p><input type="submit" value="Envoyer"
+                                            class="wpcf7-form-control wpcf7-submit text-light btn-block btn link-2"><span
+                                            class="ajax-loader"></span></p>
+                                </form>
+                                <script>
+                                    jQuery(document).ready(function () {
+                                        jQuery('body').on('click', '[name="checkout"], [name="goto_pp"], [name="goto_gc"]', function () {
+                                            if (jQuery('#agree').is(':checked')) {
+                                                jQuery(this).submit();
+                                            } else {
+                                                //alert("You must agree with the terms and conditions of sales to check out.");
+                                                alert("Vous devez accepter les conditions générales pour pouvoir continuer.");
+                                                return false;
+                                            }
+                                        });
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{>footer}}

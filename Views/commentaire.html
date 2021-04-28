@@ -1,0 +1,102 @@
+
+{{>header}}
+<header>
+    <link rel="stylesheet" type="text/css" href="../commentaireStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</header>
+<div class="comments-app" ng-app="commentsApp" ng-controller="CommentsController as cmntCtrl">
+    <h2>Commentaires</h2>
+    
+    <!-- From -->
+    <div class="comment-form">
+      <!-- Comment Avatar -->
+      <div class="comment-avatar">
+        <img src="http://lorempixel.com/200/200/people">
+      </div>
+     {{#commentaire}}
+      <form class="form" name="form" method="POST" action="/commentaire/{{idPost}}" novalidate>
+      {{/commentaire}}
+        <div class="form-row" >
+          <textarea
+                    class="input" 
+                    ng-model="cmntCtrl.comment.text" 
+                    placeholder="Ajouter un commentaire..." name="comment"
+                    required ></textarea>
+        </div>
+  
+      
+      
+        <div class="form-row text-right">
+          <input
+                 id="comment-anonymous"
+                 ng-change="cmntCtrl.anonymousChanged()"
+                 ng-model="cmntCtrl.comment.anonymous"
+                 type="checkbox">
+          <!-- <label for="comment-anonymous">Anonymous</label> -->
+        </div>
+        <!-- <form method="POST" action="/commentaire/{{idPost}}"> -->
+        <div class="form-row">
+          <input type="submit" value="Publier">
+        <!-- </div> -->
+      </form>
+    </div> 
+    {{#commentaire}}
+    Commententaire de - {{author}}
+    <!-- Comments List -->
+    <div class="comments">
+      <!-- Comment -->
+      <div class="comment" ng-repeat="comment in cmntCtrl.comments | orderBy: '-date'">
+        <!-- Comment Avatar -->
+        <div class="comment-avatar">
+          <img src="{{image_profil}} " style="justify-content: center!important;">
+        </div>
+  
+        <div class="comment-box">
+          <div class="comment-text">{{content}}</div>
+          <div class="comment-footer">
+            <div class="comment-info">
+              <span class="comment-author" >
+                <!-- <em ng-if="comment.anonymous">Anonymous</em> -->
+                <a ng-if="!comment.anonymous" href="/user_profil/{{author}}" >{{ author}}</a>
+              </span>
+              <span class="comment-date">{{date}}</span>
+            </div>
+  
+            <div class="comment-actions">
+              <a href="#">Reply</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/commentaire}}
+     
+  
+      <!-- Comment - Dummy
+      <div class="comment">
+ 
+        <div class="comment-avatar">
+          <img src="http://gravatar.com/avatar/412c0b0ec99008245d902e6ed0b264ee?s=80">
+        </div>
+  
+        <div class="comment-box">
+          <div class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum.</div>
+          <div class="comment-footer">
+            <div class="comment-info">
+              <span class="comment-author">
+                <a href="mailto:sexar@pagelab.io">Sexar</a>
+              </span>
+              <span class="comment-date">Feb 2, 2013 11:32:04 PM</span>
+            </div>
+  
+            <div class="comment-actions">
+              <a href="#">Reply</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  
+     
+    </div>
+  </div>
+  {{>footer}}

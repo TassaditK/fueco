@@ -1,0 +1,54 @@
+{{>header}}
+<head>
+    <link rel="stylesheet" type="text/css" href="../hompageStyle.css">
+</head>
+  <body class="bodyHomepage">
+          <div >
+          <img class="mx-auto d-block" src="http://localhost:4000/images/title.png" width="180px" height="110px"> 
+        </div>
+          <br>
+          
+    </div>
+      <div class="containeree">
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Se conecter</label>
+            <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">mot de passe oublié</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form method="POST" action="/"> 
+                    <div class="group">
+                        <label for="user" class="label" >Email</label>
+                        <input id="user" type="text" name="email" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label" >Mot de  passe </label>
+                        <input id="pass" type="password" class="input" name="password" data-type="password">
+                    </div>
+                    <div class="group">
+                        <!-- <input type="submit" class="button" value="Sign In"> -->
+                        <input type="submit" class=" b-red button " value="Se conecter">
+                        
+                    </div>
+                </form>
+                {{#boolean}}
+                <p class="alert alert-danger text-center" role="alert">Email ou mot de passe incorrect </p>
+                {{/boolean}}
+                    <div class="hr"></div>
+                </div>
+                <form method="POST" action="/resetpassword">
+                <div class="for-pwd-htm">
+                    <div class="group">
+                        <input type="submit" class="button" value="Réinitialiser mot de passe">
+                    </div>
+                    <div class="hr"></div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}
+
+<!--Penser a reformarter le fichier shift+option+F sur mac-->
+<!--Penser a reformarter le fichier shift+alt+F sur windows-->
